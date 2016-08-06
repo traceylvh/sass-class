@@ -20,10 +20,13 @@ a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  &:hover {
+    color: #BC2F36;
+  }
 }
-a:hover {
-  color: #BC2F36;
-}
+// a:hover {
+//   color: #BC2F36;
+// }
 
 h1 {
   font-family: 'Audiowide', cursive;
@@ -62,17 +65,27 @@ h4 {
 /* Navigation */
 nav li {
   float: left;
+  a {
+    color: #fff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    &:hover {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      color: #FB000D;
+    }
+  }
 }
-nav li a {
-  color: #fff;
-  margin: 0 10px;
-  padding: 5px 10px;
-  text-decoration: none;
-}
-nav li a:hover {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  color: #FB000D;
-}
+// nav li a {
+//   color: #fff;
+//   margin: 0 10px;
+//   padding: 5px 10px;
+//   text-decoration: none;
+// }
+// nav li a:hover {
+//   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+//   color: #FB000D;
+// }
 
 .jump {
   color: #565656;
@@ -98,53 +111,99 @@ nav li a:hover {
 header {
   background-color: #009D92;
   padding: 10px;
-}
-header h1 {
-  color: #FFEECC;
-  background: url('../images/icons/it.png') no-repeat 0 50%;
-  padding-left: 40px;
-}
-header nav {
-  float: right;
-  font-size: 1.2em;
-  margin-left: 20px;
-}
-header nav li {
-  line-height: 75px;
-}
-header nav a {
-  border-radius: 6px;
-}
-header nav a:hover {
-  background-color: #fff;
-}
 
-header:after {
-  /* clearfix hack */
-  content: "";
-  display: table;
-  clear: both;
+  h1 {
+    color: #FFEECC;
+    background: url('../images/icons/it.png') no-repeat 0 50%;
+    padding-left: 40px;
+  }
+
+  nav {
+    float: right;
+    font-size: 1.2em;
+    margin-left: 20px;
+    li {
+      line-height: 75px;
+    }
+    a {
+      border-radius: 6px;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  &:after {
+    /* clearfix hack */
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
+// header h1 {
+//   color: #FFEECC;
+//   background: url('../images/icons/it.png') no-repeat 0 50%;
+//   padding-left: 40px;
+// }
+// header nav {
+//   float: right;
+//   font-size: 1.2em;
+//   margin-left: 20px;
+// }
+// header nav li {
+//   line-height: 75px;
+// }
+// header nav a {
+//   border-radius: 6px;
+// }
+// header nav a:hover {
+//   background-color: #fff;
+// }
+
+// header:after {
+//   /* clearfix hack */
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
 
 
 /* Main */
-#main section {
-  margin-bottom: 1em;
-  position: relative;
-}
-#main div.wrapper{
-    width: 100%;
-    max-width:1400px;
-    margin: 0 auto;
+#main {
+  section {
+    margin-bottom: 1em;
+    position: relative;
+    &:after {
+      /* clearfix hack */
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  div.wrapper{
+      width: 100%;
+      max-width:1400px;
+      margin: 0 auto;
+  }
+
 }
 
+// #main section {
+//   margin-bottom: 1em;
+//   position: relative;
+// }
+// #main div.wrapper{
+//     width: 100%;
+//     max-width:1400px;
+//     margin: 0 auto;
+// }
 
-#main section:after {
-  /* clearfix hack */
-  content: "";
-  display: table;
-  clear: both;
-}
+
+// #main section:after {
+//   /* clearfix hack */
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
 
 
 /* Famous Women */
